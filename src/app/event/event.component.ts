@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.css']
 })
-export class EventComponent implements OnInit {
+export class EventComponent {
+  title = 'sziasztok, mi itt vagyunk!';
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
+    console.log(`${this.title} itt lehet folytatni folyó szöveggel, ha akarom`);
+    this.greeting();
   }
-
+  greeting() {
+    console.log('not implented yet');
+  }
 }

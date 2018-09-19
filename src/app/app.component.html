@@ -1,2 +1,32 @@
 <p>Hello netacademia</p>
 <app-event></app-event>
+
+<ul>
+  <li *ngFor="let event of events"> {{event}}</li>
+</ul>
+
+<div *ngIf="show">
+  <p>Nagy Gergő</p>
+</div>
+
+<div [ngClass]="{'valami' : show}">
+  <p>ngClass demo</p>
+</div>
+
+<input type="text" [(ngModel)]="inputContent">
+<div>
+  {{inputContent}}
+</div>
+<button [ngClass]="{'gomb': !show}"
+        (click)="toggle()"
+        (mouseover)="demo($event)"
+        [disabled]="klikkeljunke"
+
+>Toggle</button>
+
+<app-alma></app-alma>
+<app-alma></app-alma>
+<app-alma></app-alma>
+<app-alma></app-alma>
+<app-alma></app-alma>
+<app-alma></app-alma>

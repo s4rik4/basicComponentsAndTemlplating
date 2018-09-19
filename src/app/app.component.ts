@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Event} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'basicComponentsAndTemlplating';
+  title = 'app';
+  events = ['sziget', 'efott', 'fezen', 'szin'];
+  show = true;
+  klikkeljunke = false;
+  inputContent: string;
+
+  toggle() {
+    this.show = !this.show;
+    this.inputContent = 'ot, csip, RVT, ugyelet';
+  }
+
+  demo(ev: MouseEvent){
+    console.log(ev.screenX);
+  }
 }

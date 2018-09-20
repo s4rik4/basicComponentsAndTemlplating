@@ -7,11 +7,26 @@ import {Event} from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'angular király';
   events = ['sziget', 'efott', 'fezen', 'szin'];
   show = true;
   klikkeljunke = false;
   inputContent: string;
+
+  pipedemo = [
+    {
+      'id': 1,
+      'name': 'puffancs'
+    },
+    {
+      'id': 2,
+      'name': 'Toj'
+    },
+    {
+      'id': 3,
+      'name': 'Balus'
+    }
+  ];
 
   toggle() {
     this.show = !this.show;

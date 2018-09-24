@@ -1,37 +1,40 @@
-<p>Hello netacademia</p>
-<app-event></app-event>
+<app-listdemo></app-listdemo>
 
-<ul>
-  <li *ngFor="let event of events"> {{event}}</li>
-</ul>
+<!--<p>Hello netacademia</p>-->
+<!--<app-event></app-event>-->
 
-<div *ngIf="show">
-  <p>Nagy Gergő</p>
-</div>
+<!--<ul>-->
+  <!--<li *ngFor="let event of events"> {{event}}</li>-->
+<!--</ul>-->
 
-<div [ngClass]="{'valami' : show}">
-  <p>ngClass demo</p>
-</div>
-<hr>
-  {{ title | uppercase }}
-<hr>
-  {{ pipedemo | json }}
-<hr>
+<!--<div *ngIf="show">-->
+  <!--<p>Nagy Gergő</p>-->
+<!--</div>-->
 
-<input type="text" [(ngModel)]="inputContent">
-<div>
-  {{inputContent}}
-</div>
-<button [ngClass]="{'gomb': !show}"
-        (click)="toggle()"
-        (mouseover)="demo($event)"
-        [disabled]="klikkeljunke"
+<!--<div [ngClass]="{'valami' : show}">-->
+  <!--<p>ngClass demo</p>-->
+<!--</div>-->
+<!--<hr>-->
+  <!--{{ title | uppercase }}-->
+<!--<hr>-->
+  <!--{{ pipedemo | json }}-->
+<!--<hr>-->
 
->Toggle</button>
+<!--<input type="text" [(ngModel)]="inputContent">-->
+<!--<div>-->
+  <!--{{inputContent}}-->
+<!--</div>-->
+<!--<button [ngClass]="{'gomb': !show}"-->
+        <!--(click)="toggle()"-->
+        <!--(mouseover)="demo($event)"-->
+        <!--[disabled]="klikkeljunke"-->
 
-<app-alma></app-alma>
-<app-alma></app-alma>
-<app-alma></app-alma>
-<app-alma></app-alma>
-<app-alma></app-alma>
-<app-alma></app-alma>
+<!--&gt;Toggle</button>-->
+
+<!--<app-alma></app-alma>-->
+<!--<app-alma></app-alma>-->
+<!--<app-alma></app-alma>-->
+<!--<app-alma></app-alma>-->
+<!--<app-alma></app-alma>-->
+<!--<app-alma></app-alma>-->
+

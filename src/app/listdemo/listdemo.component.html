@@ -1,0 +1,16 @@
+<ul>
+  <li class="list-padding" *ngFor="let ev of events">{{ ev.name }}
+  <button (click)="delete(ev.id)">Törlés</button>
+  </li>
+</ul>
+
+<input type="text" #newEventNameInput>
+<button (click)="add(newEventNameInput)">Mentés</button>
+  <pre>
+    {{ events | json }}
+  </pre>
+  <!--<li>sziget</li>-->
+  <!--<li>fezen</li>-->
+  <!--<li>rockmaraton</li>-->
+  <!--<li>oktoberfest</li>-->
+

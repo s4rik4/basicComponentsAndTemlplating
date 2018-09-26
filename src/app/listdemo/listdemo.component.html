@@ -5,9 +5,15 @@
   <button (click)="delete(ev.id)">Törlés</button>
   </li>
 </ul>
-
+<div class="list-padding">
+<label class="input-label" for="eventname">Új esemény</label>
 <input type="text" #newEventNameInput>
-<button (click)="add(newEventNameInput)">Mentés</button>
+</div>
+<div class="list-padding">
+<label class="input-label" for="eventpic">Kép feltöltése</label>
+<input type="text" #newEventPicInput>
+</div>
+<button (click)="add(newEventNameInput, newEventPicInput)">Mentés</button>
   <pre>
     {{ events | json }}
   </pre>

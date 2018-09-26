@@ -34,10 +34,11 @@ export class ListdemoComponent {
     }).id;
     console.log(puf);
   }
-  add (newEventNameInput: HTMLInputElement){
+  add (newEventNameInput: HTMLInputElement, newEventPicInput: HTMLInputElement){
     const maxId = this.events.reduce((x, y) => x.id > y.id ? x : y).id;
-    this.events = [...this.events, new EventModel(maxId + 1, newEventNameInput.value)];
+    this.events = [...this.events, new EventModel(maxId + 1, newEventNameInput.value, newEventPicInput.value)];
     newEventNameInput.value = '';
+    newEventPicInput.value = '';
   }
   delete(id: number) {
     this.events = this.events.filter((ev: EventModel) => ev.id !== id);

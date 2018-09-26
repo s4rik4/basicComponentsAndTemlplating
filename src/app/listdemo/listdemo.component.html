@@ -2,18 +2,19 @@
   <li class="list-padding" *ngFor="let ev of events">
     <img [src]="ev.pic" alt="" width="50px" height="50px">
     {{ ev.name }}
-  <button (click)="delete(ev.id)">Törlés</button>
+    <button (click)="edit(ev.id)">Szerkesztés</button>
+    <button (click)="delete(ev.id)">Törlés</button>
   </li>
 </ul>
 <div class="list-padding">
 <label class="input-label" for="eventname">Új esemény</label>
-<input type="text" #newEventNameInput>
+<input type="text" #newEventNameInput id="eventname" [value]="modifyEvent.name">
 </div>
 <div class="list-padding">
 <label class="input-label" for="eventpic">Kép feltöltése</label>
-<input type="text" #newEventPicInput>
+<input type="text" #newEventPicInput id="eventpic" [value]="modifyEvent.pic">
 </div>
-<button (click)="add(newEventNameInput, newEventPicInput)">Mentés</button>
+<button (click)="save(newEventNameInput, newEventPicInput)">Mentés</button>
   <pre>
     {{ events | json }}
   </pre>
